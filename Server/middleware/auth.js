@@ -3,7 +3,7 @@ const config = require("config");
 
 module.exports = function(req, res, next) {
   // Get the token from header
-  const token = req.header("authentication"); //authetication -> standard
+  const token = req.header("auth"); //authetication -> standard
   // checj if not token
   if (!token) {
     return res.status(401).json({ msg: "No token, authorization denied" });

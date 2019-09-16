@@ -12,7 +12,7 @@ app.get('/', (req,res) =>  res.json({ msg: 'Welcome to my world' }));
 
 //Routes
 app.use('/users', require('./routes/users'));
-app.use('/contacts', require('./routes/contacts'));
+app.use('/wallets', require('./routes/wallets'));
 app.use('/auth', require('./routes/auth'));
 
 
