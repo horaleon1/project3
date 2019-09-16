@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import video from '../../assets/video.mp4';
-import Particles from "react-particles-js";
+// import Particles from "react-particles-js";
 
 const particleOpt = {
   particles: {
@@ -36,7 +36,6 @@ const particleOpt = {
 const Navbar = () => {
   return (
     <div className="container">
-      <Particles params={particleOpt} className="particlesNavbar" />
       <ul className="leftSide">
         <li>
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>

@@ -19,12 +19,12 @@
 .leftSide{
   float: left;
   margin-left: 5%;
-  margin-top: 1%;
+  margin-top: 1.5%;
 }
 .rightSide{
   float: right;
   margin-right: 5%;
-  margin-top: 1%;
+  margin-top: 1.5%;
 }
 .leftSide li{
   margin-right: 15px;
@@ -32,12 +32,16 @@
 .rightSide li{
   margin-left: 15px;
 }
-
 .homeContainer {
   background-color: black;
-  min-height: 80vh;
+  min-height: 90vh;
 }
 .particlesNavbar {
   position: absolute;
+  z-index: -1;
+}
+.footerContainer{
+  height: 200px;
+  background-color: #2C2C2C;
 }
 
