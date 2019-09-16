@@ -4,10 +4,10 @@ import Particles from "react-particles-js";
 const particleOpt = {
   particles: {
     number: {
-      value: 150,
+      value: 80,
       density: {
         enable: true,
-        value_area: 800
+        value_area: 400
       },
       color: {
         value: "#FE280A"
@@ -35,7 +35,6 @@ const Home = () => {
   return (
     <div className="homeContainer">
       <Particles params={particleOpt} />
-      
     </div>
   );
 };

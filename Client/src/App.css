@@ -4,42 +4,40 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-.home{
+.home {
   position: relative;
 }
 .container {
-  height: 60px;
-  color: #020a68;
- 
+  height: 55px;
+  border-bottom: 0.1px solid white;
+  background-color: black;
 }
-.container ul:nth-child(1) {
-  margin-left: 5%;
-  margin-top: 1.2%;
+
+.leftSide li, .rightSide li{
+  display: inline;
+}
+.leftSide{
   float: left;
-  list-style: none;
-  z-index: 9999;
-
+  margin-left: 5%;
+  margin-top: 1%;
 }
-.container ul:nth-child(2) {
-  margin-right: 5%;
-  margin-top: 1.2%;
+.rightSide{
   float: right;
-  list-style: none;
+  margin-right: 5%;
+  margin-top: 1%;
 }
-.container ul:nth-child(1) li {
-  display: inline;
-  margin-right: 10px;
+.leftSide li{
+  margin-right: 15px;
 }
-.container ul:nth-child(2) li{
-  display: inline;
-  margin-left: 10px;
-
+.rightSide li{
+  margin-left: 15px;
 }
-
 
 .homeContainer {
   background-color: black;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  min-height: 80vh;
 }
+.particlesNavbar {
+  position: absolute;
+}
+
