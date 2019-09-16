@@ -12,9 +12,11 @@ const Wallet = require("../models/Wallet");
 router.get("/", auth, async (req, res) => {
   //res.send('Get all contacts');
   try {
-    const wallets = await Wallet.find({ user: req.user.id }).sort({
-      date: -1
-    });
+    const wallets = await Wallet.find({ user: req.user.id })
+    
+    // .sort({
+    //   date: -1
+    
     res.json(wallets);
   } catch (error) {
     console.error(error.message);
@@ -25,15 +27,32 @@ router.get("/", auth, async (req, res) => {
 // POST /contacts
 // Add new contact
 // Private page
-router.post("/", (req, res) => {
-  res.send("Add contact");
+router.post("/", auth, async (req, res) => {
+  //res.send("Add contact");
+
+  const { amount } = req.body;
+
+  try {
+    const newWallet = new Contact({
+      amount,
+      user: req.user.id
+    });
+
+    const wallet = await newWallet.save();
+
+    res.json(wallet);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server Error');
+  }
 });
 
 // PUT /contacts/:id
 // Update contact
 // Private page
-router.put("/:id", (req, res) => {
-  res.send("Update contact");
+router.put("/:id", auth, async (req, res) => {
+  //res.send("Update contact");
+  
 });
 // DELETE /contacts/:id
 // Delete contact
