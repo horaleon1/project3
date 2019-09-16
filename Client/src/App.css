@@ -1,0 +1,23 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+height:60px;
+color: #020A68;
+}
+.container ul{
+  padding-top: 1%;
+}
+.container ul li{
+  display: inline-block;
+  margin-left: 20%;
+}
+
+.homeContainer{
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
